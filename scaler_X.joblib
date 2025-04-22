@@ -1,0 +1,10 @@
+# Add this to your training notebook (rl_project_final.ipynb) after fitting scaler_X
+import joblib
+
+# Assuming scaler_X is your fitted MinMaxScaler object from the notebook
+# scaler_X = MinMaxScaler()
+# X_scaled = scaler_X.fit_transform(X) # Or just scaler_X.fit(X) if you scale later
+
+SCALER_PATH = "scaler_X.joblib"
+joblib.dump(scaler_X, SCALER_PATH)
+print(f"Scaler saved to {SCALER_PATH}")
